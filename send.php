@@ -19,25 +19,26 @@ else
 }
 
 $userid="";
-$sql1 = "SELECT * FROM `send_alert` WHERE 1";
+$text="";
+$sql1 = "SELECT * FROM `tfexmit` WHERE 1";
 $result = $link->query($sql1);
 if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
-		$userid=$row["room"];
+		$userid=$row["userid"];
+		$text=$row["textuse"];
 	}
 
 }
 
-$messages556="test mt4 send oninit";
 
 $format_text = [
 					"type" => "text",
-					"text" => $messages556
+					"text" => $text
 				];		
 
 //'to' => $userid,
 $data = [
-			'to' => 'C77fcccf081cc0ed39a95f8902c51e83c',
+			'to' => $userid,
 			'messages' => [$format_text]
 ];
 		
