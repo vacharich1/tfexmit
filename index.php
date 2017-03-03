@@ -29,7 +29,7 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text = $event['message']['text'];
+			$text1 = $event['message']['text'];
 			$text = strtolower($text1);
 			if($text == '@s50h17' || $text == '@s50h17_30' || $text == '@s50h17_60' || $text == '@s50m17' || $text == '@s50m17_30' || $text == '@s50m17_60' || $text == '@s50u17' || $text == '@s50u17_30' || $text == '@s50u17_60')
 			{
