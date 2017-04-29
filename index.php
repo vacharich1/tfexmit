@@ -33,42 +33,7 @@ if (!is_null($events['events'])) {
 			$text = strtolower($text1);
 			if($text == '@s50h17' || $text == '@s50h17_30' || $text == '@s50h17_60' || $text == '@s50m17' || $text == '@s50m17_30' || $text == '@s50m17_60' || $text == '@s50u17' || $text == '@s50u17_30' || $text == '@s50u17_60')
 			{
-				if($text == '@s50h17')
-				{
-					$hoonname="1";
-				}
-				else if($text == '@s50h17_30')
-				{
-					$hoonname="2";
-				}
-				else if($text == '@s50h17_60')
-				{
-					$hoonname="3";
-				}
-				else if($text == '@s50m17')
-				{
-					$hoonname="4";
-				}
-				else if($text == '@s50m17_30')
-				{
-					$hoonname="5";
-				}
-				else if($text == '@s50m17_60')
-				{
-					$hoonname="6";
-				}
-				else if($text == '@s50u17')
-				{
-					$hoonname="7";
-				}
-				else if($text == '@s50u17_30')
-				{
-					$hoonname="8";
-				}
-				else if($text == '@s50u17_60')
-				{
-					$hoonname="9";
-				}
+
 				
 				
 				if($event['source']['userId'] == 'Ub5f45b12f0f8f8a3a08e5b52ebbcc96b')
