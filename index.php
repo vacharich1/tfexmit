@@ -79,17 +79,7 @@ if (!is_null($events['events'])) {
 				{
 					$room=$event['source']['groupId'];
 				}
-				
-				
-				
-				$sql = "INSERT INTO hoon_check (id, hoonname, room)
-						VALUES ('', '$hoonname', '$room')";
-				if (mysqli_query($link, $sql)) {
-						echo "New record created successfully";
-				} 
-				else {
-						echo "Error: " . $sql . "<br>" . mysqli_error($link);
-				}
+
 
 			}
 			// Get replyToken
