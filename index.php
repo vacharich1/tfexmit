@@ -31,75 +31,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text1 = $event['message']['text'];
 			$text = strtolower($text1);
-			if($text == '@s50h17' || $text == '@s50h17_30' || $text == '@s50h17_60' || $text == '@s50m17' || $text == '@s50m17_30' || $text == '@s50m17_60' || $text == '@s50u17' || $text == '@s50u17_30' || $text == '@s50u17_60')
-			{
-				if($text == '@s50h17')
-				{
-					$hoonname="1";
-				}
-				else if($text == '@s50h17_30')
-				{
-					$hoonname="2";
-				}
-				else if($text == '@s50h17_60')
-				{
-					$hoonname="3";
-				}
-				else if($text == '@s50m17')
-				{
-					$hoonname="4";
-				}
-				else if($text == '@s50m17_30')
-				{
-					$hoonname="5";
-				}
-				else if($text == '@s50m17_60')
-				{
-					$hoonname="6";
-				}
-				else if($text == '@s50u17')
-				{
-					$hoonname="7";
-				}
-				else if($text == '@s50u17_30')
-				{
-					$hoonname="8";
-				}
-				else if($text == '@s50u17_60')
-				{
-					$hoonname="9";
-				}
-				
-				
-				if($event['source']['userId'] == 'Ub5f45b12f0f8f8a3a08e5b52ebbcc96b')
-				{
-					$room=$event['source']['userId'];
-				}
-				else
-				{
-					$room=$event['source']['groupId'];
-				}
-				
-				
-				
-				$sql = "INSERT INTO hoon_check (id, hoonname, room)
-						VALUES ('', '$hoonname', '$room')";
-				if (mysqli_query($link, $sql)) {
-						echo "New record created successfully";
-				} 
-				else {
-						echo "Error: " . $sql . "<br>" . mysqli_error($link);
-				}
-				sleep(0.3);
-				$check ="check1";
-				#echo "work code";
-				$sql = "INSERT INTO `check_capture`(`id`, `check1`) VALUES ('','$check')";
-				if (mysqli_query($link, $sql)) {
-						echo "New record created successfully";
-				} 
-				else {
-						echo "Error: " . $sql . "<br>" . mysqli_error($link);
-				}
+			
 			}
 			// Get replyToken
 			$replyToken = $event['replyToken'];
